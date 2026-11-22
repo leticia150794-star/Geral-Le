@@ -245,9 +245,9 @@ def estrutura():
              ["Cobrimentos", "Pilares e vigas 40 mm; lajes 35 mm", "NBR 6118"],
              ["Carga permanente adotada", f"{f2(e['g'], 1)} kN/m2 (laje + revestimento + divisorias)", ""],
              ["Sobrecarga", f"{f2(e['q'], 1)} kN/m2 (7,5 nas salas criticas)", "NBR 6120"],
-             ["Pilar interno: area de influencia", f"{f2(e['ai'], 1)} m2 x 4 lajes -> N = {e['ni']:.0f} kN (servico)", f"Nd = {e['nid']:.0f} kN < 0,85 fcd Ac = {e['nrd']:.0f} kN"],
-             ["Pilar de fachada", f"{f2(e['ae'], 1)} m2 x 4 lajes -> N = {e['ne']:.0f} kN (servico)", ""],
-             ["Fundacoes", "Blocos sobre 2 estacas helice continua D60 (internos) e D50 (fachada)", "A confirmar com 12 furos SPT"]],
+             ["Pilar interno: area de influencia", f"{f2(e['ai'], 1)} m2 x 5 lajes -> N = {e['ni']:.0f} kN (servico)", f"Nd = {e['nid']:.0f} kN < 0,85 fcd Ac = {e['nrd']:.0f} kN"],
+             ["Pilar de fachada", f"{f2(e['ae'], 1)} m2 x 5 lajes -> N = {e['ne']:.0f} kN (servico)", ""],
+             ["Fundacoes", "Blocos sobre 2 estacas helice continua D70 (internos) e D60 (fachada) - ver EST-02", "A confirmar com 12 furos SPT"]],
             (0, -12), [62, 110, 80])
     notes(s, "NOTAS", ["1. Pre-dimensionamento para estudo de viabilidade.", "   O calculo estrutural completo (esforcos, flechas,",
                        "   vento, estabilidade global, incendio) cabe ao", "   projetista estrutural.", "2. Vento: V0 = 30 m/s (NBR 6123).",
@@ -530,4 +530,9 @@ def modulo():
 if __name__ == "__main__":
     implantacao(); arq_plan("ARQ-02", "T"); arq_plan("ARQ-03", "1"); arq_plan("ARQ-04", "2"); arq_roof(); cortes(); fachadas(); modulo()
     estrutura(); hid_af(); hid_es(); hid_ap(); incendio(); unifilar(); ele_plan()
-    import json; json.dump(SHEETS, open(OUT + "/sheets.json", "w"))
+    import detail as D
+    n = 8
+    for fl in "T12":
+        for blk in "AB": D.block_plan(f"ARQ-{n:02d}", fl, blk); n += 1
+    D.det_san_escada(); D.fundacoes(); D.hid_outros(); D.clima(); D.ele_quadros()
+    import json, sheets as S2; json.dump(SHEETS + S2.SHEETS, open(OUT + "/sheets.json", "w"))

@@ -489,7 +489,7 @@ $SKPOLY
   9
 $TDCREATE
  40
-2461367.099814815
+2461367.129976852
   9
 $TDUCREATE
  40
@@ -497,7 +497,7 @@ $TDUCREATE
   9
 $TDUPDATE
  40
-2461367.099814815
+2461367.129976852
   9
 $TDUUPDATE
  40
@@ -929,11 +929,11 @@ $PSTYLEMODE
   9
 $FINGERPRINTGUID
   2
-{6FA459DB-71A8-459F-8F2A-583442A71F4E}
+{13449F1F-85AD-4AD8-B7A5-507C703854EF}
   9
 $VERSIONGUID
   2
-{0BE12098-9FCC-466D-B024-710E77386FA0}
+{81784DA6-8CCE-47E9-9B75-504AB57EEED9}
   9
 $EXTNAMES
 290
@@ -1323,9 +1323,9 @@ ISM
   0
 CLASS
   1
-ACDBPLACEHOLDER
+LAYOUT
   2
-AcDbPlaceHolder
+AcDbLayout
   3
 ObjectDBX Classes
  90
@@ -1339,9 +1339,9 @@ ObjectDBX Classes
   0
 CLASS
   1
-LAYOUT
+ACDBPLACEHOLDER
   2
-AcDbLayout
+AcDbPlaceHolder
   3
 ObjectDBX Classes
  90
@@ -20851,7 +20851,7 @@ AcDbText
  40
 0.44000000000000006
   1
-43,2 m2 x 4 lajes -> N = 2160 kN (servico)
+43,2 m2 x 5 lajes -> N = 2700 kN (servico)
  11
 12.64
  21
@@ -20883,7 +20883,7 @@ AcDbText
  40
 0.44000000000000006
   1
-Nd = 3024 kN < 0,85 fcd Ac = 5950 kN
+Nd = 3780 kN < 0,85 fcd Ac = 5950 kN
  11
 34.64
  21
@@ -20971,7 +20971,7 @@ AcDbText
  40
 0.44000000000000006
   1
-34,6 m2 x 4 lajes -> N = 1728 kN (servico)
+34,6 m2 x 5 lajes -> N = 2160 kN (servico)
  11
 12.64
  21
@@ -21091,7 +21091,7 @@ AcDbText
  40
 0.44000000000000006
   1
-Blocos sobre 2 estacas helice continua D60 (internos) e D50 (fachada)
+Blocos sobre 2 estacas helice continua D70 (internos) e D60 (fachada) - ver EST-02
  11
 12.64
  21
@@ -22789,7 +22789,7 @@ DictionaryVariables
 280
 0
   1
-1.4.5 @ 2026-11-22T02:23:44.676254+00:00
+1.4.5 @ 2026-11-22T03:07:10.155190+00:00
   0
 VISUALSTYLE
   5
@@ -23501,7 +23501,7 @@ DictionaryVariables
 280
 0
   1
-1.4.5 @ 2026-11-22T02:23:44.687726+00:00
+1.4.5 @ 2026-11-22T03:07:10.166186+00:00
   0
 ENDSEC
   0

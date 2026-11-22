@@ -23,6 +23,17 @@ Reconstrução do bloco de laboratórios da UFPE (Campus Recife). Revisão R00, 
 | INC-01 | Incendio - sprinklers, hidrantes e saidas - pav. tipo | 1:200 |
 | ELE-01 | Eletrica - diagrama unifilar geral e quadro de cargas | 1:200 |
 | ELE-02 | Eletrica - iluminacao e quadros - pavimento-tipo | 1:200 |
+| ARQ-08 | Arquitetura - terreo - bloco A - layout | 1:100 |
+| ARQ-09 | Arquitetura - terreo - bloco B - layout | 1:100 |
+| ARQ-10 | Arquitetura - 1o pavimento - bloco A - layout | 1:100 |
+| ARQ-11 | Arquitetura - 1o pavimento - bloco B - layout | 1:100 |
+| ARQ-12 | Arquitetura - 2o pavimento - bloco A - layout | 1:100 |
+| ARQ-13 | Arquitetura - 2o pavimento - bloco B - layout | 1:100 |
+| DET-02 | Detalhes - sanitarios, escada e quadro de esquadrias | 1:50 |
+| EST-02 | Estrutura - planta de fundacoes | 1:200 |
+| HID-04 | Hidraulica - agua fria e esgoto - terreo e 1o pavimento | 1:200 |
+| CLI-01 | Climatizacao e exaustao - esquema do pavimento-tipo | 1:200 |
+| ELE-03 | Eletrica - quadros terminais | 1:200 |
 
 Cada prancha existe em PDF (`pdf/`) e em DXF (`dxf/`, em metros, para AutoCAD, BricsCAD, QCAD ou LibreCAD). O arquivo `caderno-de-projetos.pdf` reúne todas.
 
@@ -39,8 +50,8 @@ Cada prancha existe em PDF (`pdf/`) e em DXF (`dxf/`, em metros, para AutoCAD, B
 
 - Concreto armado, fck 35 MPa, classe de agressividade III; pilares 40 × 70 cm; laje nervurada de 35 cm.
 - Cargas: permanente 7,5 kN/m², sobrecarga 5,0 kN/m².
-- Pilar interno: 43,2 m² × 4 lajes × 12,5 kN/m² = 2160 kN em serviço; Nd = 3024 kN, contra 0,85·fcd·Ac = 5950 kN (aproveitamento de 51 %, sem contar armadura nem flexão).
-- Pilar de fachada: 34,6 m² × 4 lajes → 1728 kN em serviço.
+- Pilar interno: 43,2 m² × 5 lajes × 12,5 kN/m² = 2700 kN em serviço; Nd = 3780 kN, contra 0,85·fcd·Ac = 5950 kN (aproveitamento de 64 %, sem contar armadura nem flexão).
+- Pilar de fachada: 34,6 m² × 5 lajes → 2160 kN em serviço.
 - Fundações previstas em estacas hélice contínua; diâmetro e profundidade dependem de sondagem SPT.
 
 ## 4. Elétrica
@@ -110,9 +121,18 @@ Tensão 380/220 V, esquema TN-S. Corrente = demanda ÷ (√3 × 380 V × 0,92). 
 - Três hidrantes por pavimento, mangueira de 40 mm × 30 m.
 - Classificação de risco, densidades e reserva precisam ser confirmadas pelo projetista conforme o COSCIP-PE e a NBR 10897.
 
-## 9. O que ainda não existe
+## 9. Climatização (esquema)
+
+- Carga térmica por índice de área: cerca de 1.243 kW (354 TR). Central de água gelada com 3 resfriadores de 180 TR, dois em operação e um de reserva.
+- Laboratórios com 100 % de ar externo e 8 trocas por hora (cerca de 47.800 m³/h); capelas com exaustão própria até a cobertura.
+
+## 10. Planilha
+
+`quantitativos-e-quadros.xlsx` traz a lista de ambientes com áreas e acabamentos, o quadro de esquadrias, o quadro geral de cargas, os 115 circuitos dos quadros de iluminação e tomadas, os aparelhos hidráulicos e uma lista parcial de quantitativos com coluna de preços para preencher.
+
+## 11. O que ainda não existe
 
 - Projetos executivos (detalhamento de armaduras, isométricos, diagramas de quadros, detalhes construtivos, caderno de especificações e orçamento).
-- Projetos de climatização e exaustão, gases, dados e automação, SPDA e paisagismo.
+- Projeto de climatização e exaustão além do esquema da prancha CLI-01; gases, dados e automação, SPDA e paisagismo.
 - Levantamento topográfico, sondagens e cadastro das redes do campus.
 - Validação do programa com os grupos de pesquisa e lista real de equipamentos.

@@ -118,7 +118,7 @@ def incendio():
 
 def estrutura():
     g, q = 7.5, 5.0; ai = BAY * 6.0; ae = BAY * 4.8
-    ni = ai * 4 * (g + q); ne = ae * 4 * (g + q)
+    ni = ai * 5 * (g + q); ne = ae * 5 * (g + q)
     return dict(g=g, q=q, ai=ai, ae=ae, ni=ni, ne=ne, nid=ni * 1.4, nrd=0.85 * 35e3 / 1.4 * 0.28)
 
 
